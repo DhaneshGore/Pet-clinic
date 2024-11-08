@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+</head>
+
+<body>
+    <h1>Appointments</h1>
+    <ul>
+        {% for appointment in appointments %}
+        <li>{{ appointment.date }} - Pet ID: {{ appointment.pet_id }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('main.index') }}">Back to Owners</a>
+    <a href="{{ url_for('main.list_pets') }}">View Pets</a>
+</body>
+
+</html>
