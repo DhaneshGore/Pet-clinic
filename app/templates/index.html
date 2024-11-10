@@ -1,4 +1,3 @@
-<!-- app/templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +12,10 @@
     <h1>Owners</h1>
     <ul>
         {% for owner in owners %}
-        <li>{{ owner.name }}</li>
+        <li>{{ owner.name }} - {{ owner.contact }}</li>
         {% endfor %}
     </ul>
+    <a href="{{ url_for('main.add_owner') }}">Add Owner</a>
     <a href="{{ url_for('main.list_pets') }}">View Pets</a>
     <a href="{{ url_for('main.list_appointments') }}">View Appointments</a>
 </body>

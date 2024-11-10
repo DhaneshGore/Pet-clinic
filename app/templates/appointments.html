@@ -15,6 +15,7 @@
         <li>{{ appointment.date }} - Pet ID: {{ appointment.pet_id }}</li>
         {% endfor %}
     </ul>
+    <a href="{{ url_for('main.add_appointment') }}">Add Appointment</a>
     <a href="{{ url_for('main.index') }}">Back to Owners</a>
     <a href="{{ url_for('main.list_pets') }}">View Pets</a>
 </body>

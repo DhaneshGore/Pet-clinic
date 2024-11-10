@@ -15,6 +15,7 @@
         <li>{{ pet.name }} ({{ pet.type }})</li>
         {% endfor %}
     </ul>
+    <a href="{{ url_for('main.add_pet') }}">Add Pet</a>
     <a href="{{ url_for('main.index') }}">Back to Owners</a>
     <a href="{{ url_for('main.list_appointments') }}">View Appointments</a>
 </body>

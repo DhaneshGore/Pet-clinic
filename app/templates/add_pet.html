@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Add Pet</h1>
+    <form method="POST">
+        <label for="name">Pet Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="type">Pet Type:</label>
+        <input type="text" id="type" name="type" required><br><br>
+
+        <label for="owner_id">Owner:</label>
+        <select id="owner_id" name="owner_id">
+            {% for owner in owners %}
+            <option value="{{ owner.id }}">{{ owner.name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Add Pet</button>
+    </form>
+    <a href="{{ url_for('main.list_pets') }}">Back to Pets</a>
+</body>
+
+</html>
